@@ -1,0 +1,30 @@
+
+Dependency Injection 
+
+Class Animal {
+Food food1;
+Food food=new Food();
+food.pizza();
+
+
+Animal(Food food) {
+this.food1=food;
+}
+
+Void setFood(Food food) {
+this.food1=food;
+}
+
+Void eat() {
+
+	food1.pizza();
+}
+
+}
+
+Class Food {
+
+      Void pizza() {
+	sop(“Pizza”);
+	}
+}

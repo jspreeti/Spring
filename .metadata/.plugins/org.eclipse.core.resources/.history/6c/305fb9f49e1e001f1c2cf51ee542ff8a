@@ -1,0 +1,21 @@
+package com.example.my_app.controller.Model;
+
+public class HelloBean {
+	String message;
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	@Override
+	public String toString() {
+		return "HelloBean [message=" + message + "]";
+	}
+	
+	
+
+}

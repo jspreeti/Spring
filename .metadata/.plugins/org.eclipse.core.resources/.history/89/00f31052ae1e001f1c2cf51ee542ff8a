@@ -1,0 +1,30 @@
+package com.example.my_app.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.my_app.controller.Model.HelloBean;
+
+@RestController
+public class SampleApplication {
+	
+	@GetMapping(path = "/hello")
+	public String hello() {
+		return "Hi Everyone";
+	}
+
+	@GetMapping(path = "/hello-bean")
+	public HelloBean helloBean() {
+		return new HelloBean("Hi Everyone");
+	}
+	
+	@GetMapping(path = "/hello-bean/path-variable/{name}")
+	public HelloBean helloBean(@PathVariable String name) {
+		return new HelloBean(String.format("Welcome %s", name));
+	}
+	
+	
+}

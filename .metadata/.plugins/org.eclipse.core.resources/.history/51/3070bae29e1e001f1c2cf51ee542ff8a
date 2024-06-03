@@ -1,0 +1,5 @@
+package com.example.my_app.controller.Model;
+
+public class HelloBean {
+
+}
